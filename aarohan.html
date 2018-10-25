@@ -1,0 +1,326 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin|Satisfy|Pacifico" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Nunito|Roboto+Mono|Titillium+Web" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Corben|Karla|Lato|Modern+Antiqua|Muli|Source+Sans+Pro" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            left: 0;
+            top: 0;
+            overflow-x: hidden;
+        }
+
+        .header {
+            color: #fff;
+            top: 0px;
+            position: absolute;
+            width: 100vw;
+            z-index: 3;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 8px 20px;
+            box-sizing: border-box;
+
+        }
+
+        .menu_items {
+            padding: 5px 20px;
+            margin: auto;
+        }
+
+        .menu_items a {
+            font-family: Fira Sans;
+            text-decoration: none;
+            color: azure;
+            display: inline-block;
+            padding: 5px;
+            font-size: 20px;
+            background: rgba(250, 250, 250, 0.1);
+            letter-spacing: 2px;
+            border: solid 1px transparent;
+        }
+
+        .menu_items a:hover {
+            border-color: white;
+        }
+
+        .top_div {
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 12%;
+            background-color: #214168;
+            border-radius: 8px;
+            z-index: 99;
+            position: fixed;
+            margin-left: 0px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            min-width: 331px;
+        }
+
+        .top_container_div {
+            width: 100vw;
+            height: 100vh;
+            background-image: url(Images/default_header.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #214168;
+            position: sticky;
+        }
+
+        .top2_container_div {
+            width: 100vw;
+            display: flex;
+            height: 100vh;
+        }
+
+        .first_half {
+            width: 50%;
+            height: 100vh;
+            flex: 1;
+            border-right: 1px solid darkslateblue;
+            background-color: white;
+        }
+
+        .second_half {
+            width: 50%;
+            height: 100vh;
+            position: relative;
+            background-color: #fafafa;
+            flex: 1;
+            border-left: 1px solid darkslateblue;
+        }
+
+        .right_line {
+            width: 50px;
+            height: 2px;
+            background-color: darkslateblue;
+            position: absolute;
+            left: 50.7%;
+            margin-top: 24%;
+            z-index: 10;
+        }
+
+        .left_line {
+            width: 50px;
+            height: 2px;
+            background-color: darkslateblue;
+            position: absolute;
+            left: 46.75%;
+            margin-top: 34%;
+            z-index: 10;
+        }
+
+        .right_event_div {
+            position: absolute;
+            width: 58%;
+            height: 75%;
+            top: 22%;
+            left: 60px;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 60px;
+            border: 1px solid black;
+            transition-duration: 0.5s;
+            overflow: hidden;
+            box-shadow: 0px 4px 4px #505050;
+
+        }
+
+        .right_event_div:hover .background_image1 {
+            opacity: 0.2;
+        }
+
+
+
+        .right_event_div:hover .text_inside {
+            top: 30px;
+        }
+
+        .right_event_div:hover .text_description {
+            top: 140px;
+        }
+
+        .left_event_div:hover .background_image1 {
+            opacity: 0.2;
+        }
+
+
+
+        .left_event_div:hover .text_inside {
+            top: 30px;
+        }
+
+        .left_event_div:hover .text_description {
+            top: 140px;
+        }
+
+        .left_event_div {
+            position: relative;
+            width: 58%;
+            height: 75%;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 25px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 60px;
+            top: 20%;
+            left: 70px;
+            border: 1px solid black;
+            transition-duration: 0.5s;
+            overflow: hidden;
+            box-shadow: 0px 4px 4px #505050;
+        }
+
+        .top_image_event_div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 5px;
+            z-index: 2;
+            background-color: transparent;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 50px;
+            border-bottom: 1px solid darkslateblue;
+        }
+
+        .text_inside {
+            font-family: nunito;
+            font-size: 30px;
+            top: -70px;
+            color: darkblue;
+            left: 180px;
+            position: absolute;
+            transition-duration: 0.6s;
+            display: inline-block;
+        }
+
+        .text_description {
+            font-family: muli;
+            top: 330px;
+            position: absolute;
+            left: 30px;
+            transition-duration: 1s;
+            display: inline-block;
+        }
+
+        .background_image1 {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        .event_above_text {
+            position: absolute;
+            margin-left: 12%;
+            margin-top: 12%;
+            font-family: Satisfy;
+            font-size: 55px;
+            color: grey;
+        }
+
+        .event_below_text {
+            position: absolute;
+            margin-left: 32%;
+            margin-top: 74%;
+            font-family: Satisfy;
+            font-size: 55px;
+            color: #505050;
+        }
+
+        .top_top_div {
+            position: absolute;
+            width: 100vw;
+            height: 100px;
+            background-color: #f6f6f6;
+            z-index: 2;
+            text-align: center;
+            border-bottom: 1px solid white;
+        }
+
+        .top_top_div h2 {
+            font-family: Merienda;
+            font-size: 40px;
+            color: darkslateblue;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="top_div">
+            <div class="menu_items"><a href="#">Home</a></div>
+            <div class="menu_items"><a href="#">Events</a></div>
+            <div class="menu_items"><a href="#">Workshop</a></div>
+            <div class="menu_items"><a href="#">Gallery</a></div>
+            <div class="menu_items"><a href="#">Members</a></div>
+            <div class="menu_items"><a href="#">Contact Us</a></div>
+        </div>
+    </header>
+    <div class="top_container_div">
+    </div>
+    <div class="top2_container_div">
+        <div class="top_top_div">
+            <h2> Events of Aarohan </h2>
+        </div>
+        <div class="right_line"></div>
+        <div class="left_line"></div>
+        <div class="first_half">
+            <h1 class="event_above_text"> Campus Ambassador </h1>
+            <div class="left_event_div">
+                <div class="background_image1" style="background-image: url(Images/CA.png)"></div>
+                <h2 class="text_inside"> Campus Ambassador</h2>
+                <h3 class="text_description"> Grasp the opportunity of becoming voice and face of the campus and thereby enrich your personality.
+                </h3>
+
+            </div>
+        </div>
+        <div class="second_half">
+            <div class="right_event_div">
+                <div class="background_image1" style="background-image: url(Images/logoM.jpg)"></div>
+                <h2 class="text_inside"> Logo Maestro</h2>
+                <h3 class="text_description"> 'This event comes up with the startling and egregious questions based on logos of several famous brands.</h3>
+            </div>
+            <h1 class="event_below_text"> Logo Maestro </h1>
+        </div>
+    </div>
+    <div class="top2_container_div">
+        <div class="right_line"></div>
+        <div class="left_line"></div>
+        <div class="first_half" style="background-color: #fafafa;">
+            <h1 class="event_above_text"> Market Kshetra </h1>
+            <div class="left_event_div">
+                <div class="background_image1" style="background-image: url(Images/market%20kshetra.jpg)"></div>
+                <h2 class="text_inside"> Market Kshetra</h2>
+                <h3 class="text_description"> <span style="font-family: roboto mono; color:#C9B30E; font-size: 20px"> 'Marketing is a race without a finishing line'</span> <br/> An event to intensify your skill of influencing the customer by articulating the advertiser in you.
+                </h3>
+
+            </div>
+        </div>
+        <div class="second_half" style="background-color: white;">
+            <div class="right_event_div">
+                <div class="background_image1" style="background-image: url(Images/fog.jpg)"></div>
+                <h2 class="text_inside"> Flash of Genius</h2>
+                <h3 class="text_description"> This event assembles the cogents kill of participants and pushing them to increase their abilities.</h3>
+            </div>
+            <h1 class="event_below_text"> Flash of Genius </h1>
+        </div>
+    </div>
+
+</body>
+
+</html>
